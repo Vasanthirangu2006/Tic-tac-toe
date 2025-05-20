@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    // Change navbar style on scroll
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -13,13 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Hamburger menu toggle
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (navMenu.classList.contains('active')) {
@@ -29,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scrolling for anchor links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
